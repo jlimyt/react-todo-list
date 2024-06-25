@@ -1,0 +1,20 @@
+{
+  "Required": "必填",
+  "Invalid time format": "時間格式不符",
+  "Invalid date format": "日期格式不符",
+  "Incorrect format": "格式不符",
+  "Incorrect email format": "電郵格式不符",
+  "Incorrect phone format": "電話格式不符",
+  "Incorrect color format": "顏色格式不符",
+  "Incorrect password format": "密碼格式不符",
+  "Must be a number": "必須為數字",
+  "Should be integer": "應為整數",
+  "Should be greater than": "應大於",
+  "Should be less than": "應少於",
+  "The minimum character length is": "最少字元數為",
+  "The maximum character length is": "最大字元數為",
+  "The character length should be between": "字元數應為",
+  "Should be between": "應為",
+  "Should be after": "應在此日期之後:",
+  "Should be before": "應在此日期之前:"
+}

@@ -1,0 +1,37 @@
+variables:
+  GIT_SSL_NO_VERIFY: "1"
+
+stages:
+  - build
+  - deploy
+
+build-dev:
+  image: node:18.19.0
+  stage: build
+  before_script:
+    - rm -f dist
+    - rm -f ROOT
+  script:
+    - npm install --progress=false
+    - npm run build:dev
+    - cp -r ./WEB-INF ./dist/
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEPLOY_BRANCH_DEV
+
+deploy-dev:
+  image: alpine:latest
+  stage: deploy
+  before_script:
+    - apk update && apk add openssh-client
+    - apk add sshpass
+  script:
+    - sshpass -p $CI_SERVER_PASSWORD ssh -o StrictHostKeyChecking=no $CI_SERVER_USER@$CI_SERVER_IP "echo '$CI_SERVER_PASSWORD' | sudo -S su -c 'rm -rf /opt/tomcat/dev/latest/webapps/ROOT'"
+    - sshpass -p $CI_SERVER_PASSWORD scp -rp ./dist $CI_SERVER_USER@$CI_SERVER_IP:/home/$CI_SERVER_USER
+    - sshpass -p $CI_SERVER_PASSWORD ssh -o StrictHostKeyChecking=no $CI_SERVER_USER@$CI_SERVER_IP "echo '$CI_SERVER_PASSWORD' | sudo -S su -c 'cd /home/$CI_SERVER_USER; mv dist ROOT; mv ROOT /opt/tomcat/dev/latest/webapps'"
+    - sshpass -p $CI_SERVER_PASSWORD ssh -o StrictHostKeyChecking=no $CI_SERVER_USER@$CI_SERVER_IP "echo '$CI_SERVER_PASSWORD' | sudo -S su -c 'sudo systemctl restart tomcat-dev.service'"
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEPLOY_BRANCH_DEV

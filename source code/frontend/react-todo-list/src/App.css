@@ -1,0 +1,19 @@
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.cell-border td:not(:last-child),
+th:not(:last-child) {
+  border-right: 1px solid theme("colors.fuscousGray.100");
+}
+
+.strip-table-hover tbody > tr:hover {
+  background-color: theme("colors.purpleHeart.300/0.5") !important;
+}

@@ -1,0 +1,23 @@
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  info:
+    env:
+      enabled: true
+    application:
+      name: spring-todo
+      description: A todo based on The Spring Framework.
+      author: Jack Lim
+      version: '@project.version@'
+spring:
+    datasource:
+      url: jdbc:postgresql://db:5432/sample_todo
+      username: admin
+      password: root@todo
+      name: sample_todo
+    sql:
+      init:
+       mode: always

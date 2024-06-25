@@ -1,0 +1,33 @@
+{
+  "registration": "Sign Up",
+  "login": "Login",
+  "login-now": "Login",
+  "logout": "Logout",
+  "register-now": "Sign Up",
+  "or": "OR",
+  "todo-title": "Sample Todo Application",
+  "description": {
+    "normal": "Description"
+  },
+  "mobile-no": "Mobile No.",
+  "email": "Email",
+  "priority": "Priority",
+  "code": "Code",
+  "type": "Type",
+  "username": "Username",
+  "display-name": "Display Name",
+  "user-roles": "User Role(s)",
+  "password": "Password",
+  "confirm-password": "Confirm Password",
+  "category": "Category",
+  "basic-information": "Basic Information",
+  "personal-information": "Personal Information",
+  "detail": "Detail",
+  "input-prefix": "Please input ",
+  "account": "Account Information",
+  "submit": "Submit",
+  "cancel": "Cancel",
+  "confirm": "Confirm",
+  "register-success-message": "User registered successfully.",
+  "register-fail-message": "Fail to register user."
+}

@@ -1,0 +1,20 @@
+{
+  "all-assignees-must-complete": "所有受託人必須完成",
+  "owner": "擁有人",
+  "role": "用戶身份",
+  "assignees": "受託人",
+  "content": "內容",
+  "deadline": "到期日",
+  "title": "主旨",
+  "priority": "優先順序",
+  "comment": "留言",
+  "mark-as-complete": "標記為已完成",
+  "latest-todo": "新待辦事項",
+  "default-display-message": "沒有找到記錄",
+  "read-more-hint": "更多",
+  "mark-complete-modal-title": "標記為已完成",
+  "mark-complete-modal-content": "您確定要將目前事項標記為已完成嗎？",
+  "confirm": "確認",
+  "add": "新增",
+  "completed-at": "完成於"
+}

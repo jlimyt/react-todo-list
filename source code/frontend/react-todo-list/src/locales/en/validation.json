@@ -1,0 +1,20 @@
+{
+  "Required": "Required",
+  "Invalid time format": "Invalid time format",
+  "Invalid date format": "Invalid date format",
+  "Incorrect format": "Incorrect format",
+  "Incorrect email format": "Incorrect email format",
+  "Incorrect phone format": "Incorrect phone format",
+  "Incorrect color format": "Incorrect color format",
+  "Incorrect password format": "Incorrect password format",
+  "Must be a number": "Must be a number",
+  "Should be integer": "Should be integer",
+  "Should be greater than": "Should be greater than",
+  "Should be less than": "Should be less than",
+  "The minimum character length is": "The minimum character length is",
+  "The maximum character length is": "The maximum character length is",
+  "The character length should be between": "The character length should be between",
+  "Should be between": "Should be between",
+  "Should be after": "Should be after",
+  "Should be before": "Should be before"
+}

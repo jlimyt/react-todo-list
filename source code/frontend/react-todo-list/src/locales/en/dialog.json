@@ -1,0 +1,10 @@
+{
+  "leave-title": "Leave this page",
+  "leave-content": "Your changes has not been saved, are you sure you want to leave this page?",
+  "leave": "Leave",
+  "cancel": "Cancel",
+  "delete-title_one": "Delete {{count}} record?",
+  "delete-title_other": "Delete {{count}} records?",
+  "delete-content_one": "{{count}} record will be deleted. This cannot be undone.",
+  "delete-content_other": "{{count}} records will be deleted. This cannot be undone."
+}

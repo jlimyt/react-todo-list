@@ -1,0 +1,8 @@
+{
+  "leave-title": "離開當前頁面",
+  "leave-content": "確認離開當前頁面嗎？未保存的數據將會丟失",
+  "leave": "離開",
+  "cancel": "取消",
+  "delete-title": "刪除 {{count}} 項記錄?",
+  "delete-content": "{{count}} 項記錄將會被刪除，並且無法被復原"
+}

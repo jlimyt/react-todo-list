@@ -18,7 +18,7 @@
 <!-- PROJECT PREVIEW -->
 ## Project Preview
 
-![Product Name Screen Shot][application-screenshot]
+![Application Screen Shot][application-screenshot]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -59,15 +59,18 @@ The following will be used:
 2. Install Docker/Docker Desktop (https://docs.docker.com/engine/install/)
 
 3. Under docker folder, in command prompt, execute the following command:
-   [docker-screenshot]
+
+   ![Docker File Directory][docker-screenshot]
    ```sh
    docker-compose up
    ```
 4. It takes some time to initialize the database, on success it should shows the following in command prompt:
-   [success-screenshot]
+
+  ![Start Docker Success][success-screenshot]
 
 5. Navigate to localhost:5173/home, on success it should shows:
-   [home-screenshot]
+
+  ![Landing Page][home-screenshot]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

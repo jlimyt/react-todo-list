@@ -1,0 +1,7 @@
+{
+  "oops": "Oops!",
+  "sorry": {
+    "404": "Sorry, we couldn't find that page:",
+    "unexpected": "Sorry, an unexpected error has occurred:"
+  }
+}

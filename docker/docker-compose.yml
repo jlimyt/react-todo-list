@@ -1,0 +1,39 @@
+services:
+    postgres:
+        build:
+            context: ./db
+            dockerfile: Dockerfile
+        expose:
+            - "5432"
+        ports:
+            - "5432:5432"
+        container_name: postgresql_container
+        environment:
+            - POSTGRES_DB=sample_todo
+            - POSTGRES_USER=admin
+            - POSTGRES_PASSWORD=root@todo
+        volumes:
+            - ./postgres_container_data:/var/lib/postgresql/data
+        restart: always
+    spring-boot-app:
+        build: 
+            context: ./backend
+            dockerfile: Dockerfile
+        container_name: spring_boot_container
+        ports:
+            - 8080:8080
+        environment:
+            db-url: jdbc:postgresql://postgres:5432/sample_todo?createDatabaseIfNotExist=true
+            db-username: admin
+            db-password: root@todo
+        depends_on:
+            - postgres
+        restart: always
+    react-app:
+      build:
+        context: ./frontend
+        dockerfile: Dockerfile
+      ports:
+        - 5173:5173
+      stdin_open: true
+      tty: true

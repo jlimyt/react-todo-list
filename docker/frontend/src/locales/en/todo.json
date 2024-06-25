@@ -1,0 +1,20 @@
+{
+  "all-assignees-must-complete": "All assignee(s) must complete",
+  "owner": "Owner",
+  "role": "Role",
+  "assignees": "Assignee(s)",
+  "content": "Content",
+  "deadline": "Deadline",
+  "title": "Title",
+  "priority": "Priority",
+  "comment": "Comment",
+  "mark-as-complete": "Mark as completed",
+  "latest-todo": "Latest Todo",
+  "default-display-message": "No Record Found",
+  "read-more-hint": "Read More",
+  "mark-complete-modal-title": "Mark item as completed",
+  "mark-complete-modal-content": "Are you sure to you want to mark the current item as completed?",
+  "confirm": "Confirm",
+  "add": "Add ",
+  "completed-at": "Completed at: "
+}

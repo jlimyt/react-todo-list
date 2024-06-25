@@ -1,0 +1,14 @@
+.lintstagedrc*
+.husky
+.prettierignore*
+node_module
+.eslintrc*
+.gitignore
+package-lock.json
+src/resources/icons/*
+!src/resources/icons/index.ts
+src/resources/images/*
+!src/resources/images/index.ts
+src/resources/fonts/*
+.env*
+WEB-INF/

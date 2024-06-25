@@ -12,12 +12,16 @@ import {
 import { useGetRoleDropdownMutation } from "../role/roleApiSlice"
 import {
   composeValidators,
+  formatMultipleArray,
+  multipleDropdownRequired,
   required,
   validEmail,
   validPassword,
 } from "utils/FormUtil"
 import { useTranslation } from "react-i18next"
 import SectionTitle from "components/form/SectionTitle"
+import Select from "components/form/Select"
+import { formatDropdown } from "@util/constants"
 
 export default function UserInput() {
   const { t } = useTranslation(["common"])
@@ -51,12 +55,20 @@ export default function UserInput() {
     const body = {
       username: formDatas.username,
       displayName: formDatas.displayName,
-      // loginUserRoles: formDatas.loginUserRoles?.map((e: { value: string }) => ({
-      //   role: { id: e.value },
-      // })),
+      loginUserRoles: formDatas.loginUserRoles?.map((e: { value: string }) => ({
+        id: data?.loginUserRoles?.find((r:any) => r.role.id === e.value)?.id,
+        role: { id: e.value },
+      })).concat(data?.loginUserRoles?.filter?.((r:any) => !formDatas.loginUserRoles?.map((e: { value: string }) => 
+        e.value).includes(r.role.id)).map((r:any) => {
+          var temp = Object.assign({}, r);
+          temp.active = false;
+          return temp;
+        })),
       password: formDatas.password,
       phoneNo: formDatas.phoneNo,
       email: formDatas.email,
+      active: true,
+      enable: true,
     }
 
     return body
@@ -64,11 +76,11 @@ export default function UserInput() {
 
   const initialValues = useMemo(
     () => ({
-      // loginUserRoles: formatMultipleArray(
-      //   formatDropdown(roleDropdownList),
-      //   data?.loginUserRoles,
-      //   e => e.role.id.toString(),
-      // ),
+      loginUserRoles: formatMultipleArray(
+        formatDropdown(roleDropdownList),
+        data?.loginUserRoles,
+        e => e.role.id.toString(),
+      ),
       username: data?.username,
       displayName: data?.displayName,
       password: data?.password,
@@ -142,7 +154,7 @@ export default function UserInput() {
             </Field>
           </div>
         )}
-        {/* <div>
+        <div>
           <Field name="loginUserRoles" validate={multipleDropdownRequired}>
             {({ input, meta }) => {
               return (
@@ -158,7 +170,7 @@ export default function UserInput() {
               )
             }}
           </Field>
-        </div> */}
+        </div>
       </>
     )
   }

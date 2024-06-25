@@ -21,6 +21,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -78,7 +79,8 @@ public class LoginUser extends BaseModel<Long> {
 
 	@Schema(description = "Indicates whether the account is enable")
 	@Comment("Indicates whether the account is enable")
-	private Boolean enable;
+	@Builder.Default
+	private Boolean enable=true;
 
 	public LoginUser(Long id) {
 		super();

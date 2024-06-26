@@ -16,5 +16,6 @@
   "mark-complete-modal-content": "Are you sure to you want to mark the current item as completed?",
   "confirm": "Confirm",
   "add": "Add ",
-  "completed-at": "Completed at: "
+  "completed-at": "Completed at: ",
+  "commented-at": "Commented at"
 }

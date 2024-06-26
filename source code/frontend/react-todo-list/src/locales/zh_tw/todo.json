@@ -16,5 +16,6 @@
   "mark-complete-modal-content": "您確定要將目前事項標記為已完成嗎？",
   "confirm": "確認",
   "add": "新增",
-  "completed-at": "完成於"
+  "completed-at": "標記為已完成時間: ",
+  "commented-at": "留言時間"
 }

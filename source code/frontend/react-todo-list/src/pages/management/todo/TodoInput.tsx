@@ -124,15 +124,15 @@ export default function TodoInput() {
 
   const commentColumns: TableColumnsProps[] = [
     {
-      title: "User",
+      title: t("username", { ns: "common" }),
       key: "loginUser.displayName",
     },
     {
-      title: "Comment",
+      title: t("comment"),
       key: "comment",
     },
     {
-      title: "Commented At",
+      title: t("commented-at"),
       key: "commentedAt",
     },
   ]
@@ -239,7 +239,7 @@ export default function TodoInput() {
                     <div className="flex">
                       <div className="ml-auto">
                         <Button
-                          label={"Add " + commentBtnLabel}
+                          label={t("add") + commentBtnLabel}
                           type="submit"
                         />
                       </div>

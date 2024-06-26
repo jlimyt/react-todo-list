@@ -13,7 +13,7 @@ import { Transition, Menu, Popover, PopoverButton, PopoverPanel } from "@headles
 import { Fragment, useEffect, useMemo, useState } from "react"
 import Button from "./form/Button"
 import { LoginModal } from "pages/public/authentication/Login"
-import { RegistrationModal } from "pages/public/authentication/Registration"
+import { RegistrationModal, RegistrationResponseDialog } from "pages/public/authentication/Registration"
 import { useTranslation } from "react-i18next"
 import { useGetTodoStatisticsMutation } from "pages/management/todo/todoApiSlice"
 // import type { Todo } from "models/Todo"
@@ -38,11 +38,11 @@ export const AdminHeader = () => {
   )
 
   useEffect(() => {
-    console.info("getTodoStatistics = ", getTodoStatistics)
-  },[getTodoStatistics])
-
-  useEffect(() => {
     getTodoStatistics({})
+    const interval = setInterval(() => getTodoStatistics({}), 5000)
+    return () => {
+      clearInterval(interval)
+    }
   }, [])
 
   const todoUnreadCount = todoStatisticsData.unreadCount ?? 0
@@ -177,6 +177,8 @@ export const AdminHeader = () => {
 export const PublicHeader = () => {
   const [isOpenLogin, setIsOpenLogin] = useState(false)
   const [isOpenRegistration, setIsOpenRegistration] = useState(false)
+  const [isOpenRegistrationDialog, setIsOpenRegistrationDialog] = useState(false)
+  const [content, setContent] = useState("")
   const { i18n, t } = useTranslation(["common"])
 
   return (
@@ -192,6 +194,13 @@ export const PublicHeader = () => {
       <RegistrationModal
         isOpen={isOpenRegistration}
         setIsOpen={setIsOpenRegistration}
+        setIsOpenRegistrationDialog={setIsOpenRegistrationDialog}
+        setContent={setContent}
+      />
+      <RegistrationResponseDialog
+        isOpen={isOpenRegistrationDialog}
+        setIsOpen={setIsOpenRegistrationDialog}
+        content={content}
       />
       <div className="flex items-center ml-12 gap-6">
         <div>

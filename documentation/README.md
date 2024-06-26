@@ -33,7 +33,7 @@ The API document is built using Swagger V3, and best be read in Swagger Editor t
 2. Click File > Import File, choose /documentation/api-docs-swagger-v3.json
    ![Swagger Online Editor][swagger-import-screenshot]
 
-3. Navigate to the docker folder (/docker),
+3. On load, it should displays like as following:
    ![Swagger Loaded][swagger-loaded-screenshot]
 
 

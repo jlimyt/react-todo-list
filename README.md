@@ -44,7 +44,7 @@ This project can be opened using docker-compose up under docker folder.
 
 * Docker
 
-The following will be used:
+The following ports will be used:
 
 * database: 5432
 * backend: 8080
@@ -52,15 +52,18 @@ The following will be used:
 
 ### Installation
 
-1. Clone the repo
+1. Install Docker/Docker Desktop (https://docs.docker.com/engine/install/)
+  
+2. Clone the repo
    ```sh
    git clone https://github.com/jlimyt/react-todo-list.git
    ```
-2. Install Docker/Docker Desktop (https://docs.docker.com/engine/install/)
 
-3. Under docker folder, in command prompt, execute the following command:
-
+3. Navigate to the docker folder (/docker),
    ![Docker File Directory][docker-screenshot]
+
+In command prompt, execute the following command:
+
    ```sh
    docker-compose up
    ```
@@ -99,14 +102,14 @@ There is an admin account by default in the database and able to login:
 
 Jack Lim - ytljack0261@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+[![Linked-in][linkedin-shield]][linkedin-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/jack-lim-7a60a620b/
 [application-screenshot]: screenshot%20preview/todo_table.jpg
 [docker-screenshot]: screenshot%20preview/docker_dir.jpg
 [success-screenshot]: screenshot%20preview/success.jpg
